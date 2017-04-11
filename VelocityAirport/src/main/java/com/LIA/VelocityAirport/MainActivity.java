@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) {
             takePictureButton.setEnabled(false);
-            ActivityCompat.requestPermissions(this, new String[] { Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE }, 0);
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE}, 0);
         }
     }
 
@@ -57,12 +57,12 @@ public class MainActivity extends AppCompatActivity {
         startActivityForResult(intent, 100);
     }
 
-    private static File getOutputMediaFile(){
+    private static File getOutputMediaFile() {
         File mediaStorageDir = new File(Environment.getExternalStoragePublicDirectory(
                 Environment.DIRECTORY_PICTURES), "Velocity");
 
-        if (!mediaStorageDir.exists()){
-            if (!mediaStorageDir.mkdirs()){
+        if (!mediaStorageDir.exists()) {
+            if (!mediaStorageDir.mkdirs()) {
                 Log.d("Velocity", "failed to create directory");
                 return null;
             }
@@ -70,15 +70,16 @@ public class MainActivity extends AppCompatActivity {
 
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
         return new File(mediaStorageDir.getPath() + File.separator +
-                    "IMG_"+ timeStamp + ".jpg");
+                "IMG_" + timeStamp + ".jpg");
     }
 
-        @Override
-        protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-            if (requestCode == 100) {
-                if (resultCode == RESULT_OK) {
-                    imageView.setImageURI(file);
-                }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == 100) {
+            if (resultCode == RESULT_OK) {
+                imageView.setImageURI(file);
             }
         }
+    }
+
 }
