@@ -3,4 +3,6 @@
     <string name="take_a_picture">Take a picture!</string>
     <string name="app_name" />
     <string name="photoimage">PhotoImage</string>
+    <string name="take_photo">Take Photo</string>
+    <string name="show_dropdown_menu">Show DropDown Menu</string>
 </resources>

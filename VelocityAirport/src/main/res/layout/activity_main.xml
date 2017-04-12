@@ -7,7 +7,8 @@
     android:orientation="vertical"
     tools:context="com.LIA.VelocityAirport.MainActivity"
     tools:layout_editor_absoluteX="0dp"
-    tools:layout_editor_absoluteY="0dp">
+    tools:layout_editor_absoluteY="0dp"
+    android:layout_margin="30dp">
 
 
     <ImageView
@@ -37,11 +38,32 @@
         android:layout_marginRight="8dp"
         android:background="@drawable/colorbutton"
         android:onClick="takePicture"
-        android:text="@string/take_a_picture"
+        android:text="@string/take_photo"
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
+
+
+
+    <Button
+        android:id="@+id/show_dropdown_menu"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#059636"
+        android:onClick="showDropDownMenu"
+        android:text="@string/show_dropdown_menu"
+        android:textColor="#fff" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="16dp"
+        android:autoLink="web"
+        android:gravity="center|bottom"
+        android:text="ViralAndroid.com"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
 
 </android.support.constraint.ConstraintLayout>
