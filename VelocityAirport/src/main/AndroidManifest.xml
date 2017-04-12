@@ -12,7 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.LIA.VelocityAirport.MainActivity">
+            android:name="com.LIA.VelocityAirport.MainActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" >
 
 
 

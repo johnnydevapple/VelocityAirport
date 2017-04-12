@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="take_a_picture">Take a picture!</string>
+    <string name="app_name" />
+    <string name="photoimage">PhotoImage</string>
 </resources>
